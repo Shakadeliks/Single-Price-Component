@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+html {
+
+    box-sizing: border-box;
+    font-size: 100%;
+
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+:root {
+    --main-cyan: hsl(179, 62%, 43%);
+
+    --main-yellow: hsl(71, 73%, 54%);
+
+    --neut-lgray: hsl(204, 43%, 93%);
+
+    --neut-grayblue: hsl(218, 22%, 67%);
+
+    --main-font: 'Karla', sans-serif;
+
+    --fw-400: 400;
+
+    --fw-700: 700;
+
+    --mobilePaddingX: 1.5em;
+
+    --mobilePaddingY: 2em;
+
+    --desktopPaddingY: 2.4em;
+
+    --desktopPaddingX:  2.8em;
+}
+
+body {
+
+    background-color: var(--neut-lgray);
+    font-family: var(--main-font);
+    display: flex;
+    justify-content: center;
+    padding: 1.8rem;
+
+}
+
+
+main {
+
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+/* TOP SECTION STYLES */
+
+#top-section {
+    grid-area: top ;
+    background-color: white;
+    padding: var(--mobilePaddingY) var(--mobilePaddingX);
+
+}
+
+#top-section > article {
+    width: 100%;
+}
+
+#top-section > article > h1 {
+    color: var(--main-cyan);
+    font-size: 1.5em;
+    font-weight: var(--fw-700);
+    margin-top: 0;
+
+}
+
+#top-section > article > p {
+    margin-bottom: 0;
+}
+
+.b-yellow {
+    color: hsl(71, 73%, 54%);
+    font-weight: var(--fw-700);
+    font-size: 1.1em;
+}
+
+#top-info-pg {
+    line-height: 180%;
+    color: var(--neut-grayblue);
+
+}
+
+
+
+/* /TOP SECTION STYLES */
+
+/* BOTTOM-LEFT SECTION STYLES */
+
+#bottom-left-section {
+    grid-area: bottom-left;
+    background-color: var(--main-cyan);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-bottom: 9%;
+    padding: var(--mobilePaddingY) var(--mobilePaddingX);
+
+}
+
+#bottom-left-section > article {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#bottom-left-section > article > h3 {
+    margin-top: 0;
+}
+
+#pm {
+
+    opacity: 0.6;
+    display: inline;
+    position: relative;
+    bottom: 3%;
+    left: 3.5%
+}
+
+#dollar-price {
+
+    font-size: 2em;
+    font-weight: var(--fw-700);
+}
+
+#bottom-right-pg {
+
+    margin-top: 2%;
+}
+
+button {
+
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: var(--main-yellow);
+    font-family: var(--main-font);
+    font-size: var(--fs-16);
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-weight: var(--fw-700);
+    padding: 6% 6%;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+
+
+}
+
+button:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+     transform: scale(1.2);
+}
+/* /BOTTOM-LEFT SECTION STYLES */
+
+/* BOTTOM-RIGHT SECTION STYLES */
+
+#bottom-right-section {
+    grid-area: bottom-right;
+    background-color: var(--main-cyan);
+    background: rgb(16%, 70%, 69%, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--mobilePaddingY) var(--mobilePaddingX);
+}
+
+#bottom-right-section > article {
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+#bottom-right-section > article > h3 {
+
+    margin-top: 0;
+}
+
+#bottom-right-section > article > ul {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 128%;
+    color: var(--neut-lgray);
+    font-size: 95%;
+}
+
+/* BOTTOM-RIGHT SECTION STYLES */
+
+@media only screen and (min-width: 63.5em) {
+
+    main {
+
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "top top"
+                            "bottom-left bottom-right";
+        border-radius: 0.5rem;
+
+    }
+
+    #top-section {
+        padding: var(--desktopPaddingY) var(--desktopPaddingX);
+    
+    }
+
+    #bottom-left-section {
+        padding: var(--desktopPaddingY) var(--desktopPaddingX);
+    }
+
+    #bottom-right-section {
+        padding: var(--desktopPaddingY) var(--desktopPaddingX);
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
